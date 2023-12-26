@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8ceeb78486.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar bg-body-tertiary position-relative mt-1">
+        <div class="container-fluid position-relative p-2">
+            <!-- Search Bar -->
+            <form class="d-flex m-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <!-- Toggle button for theme change -->
+            <!-- Dark mode icon -->
+            <span class="pe-2">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </span>
+            <!-- Toggle Button -->
+            <label class="switch">
+                <input type="checkbox" id="dark-theme-checkbox" value="on">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
+    <!-- Main div to store all the sections -->
+    <main id="main-div" class="container text-center">
+        <!-- All songs section -->
+        <div class="row position-relative">
+            <section id="all-songs" class="col all-songs">
+                <!-- Filter Selector -->
+                <div id="filter-selector">
+                    <span class="text-start">Filter by Genre: </span>
+                    <select name="filters" id="filter-selector-dropdown">
+                        <option value="All">All</option>
+                        <option value="Party">Party</option>
+                        <option value="Hip Hop"> Hip Hop</option>
+                        <option value="Romantic">Romantic</option>
+                    </select>
+                    <h3 id="all-songs-heading" class="text-start">All Songs</h3>
+                    <div id="songs-div" class="position-relative d-block">
+                    </div>
+                </div>
+            </section>
+            <!-- Current Song Playing Section -->
+            <section id="song-play-section" class="col song-card">
+                <div id="song-play-img-div">
+                    <img src="songs\Cover-Img\tropical-house-funny-1.jpg" alt="" id="song-play-img">
+                    <h5 id="song-name">Tropical House Funny-1</h5>
+                    <p id="artist-name">Urban Legend</p>
+
+                </div>
+                <audio controls id="audio-tag">
+                    <source src="songs/arabic-music-hip-hop.mp3" type="audio/ogg" id="audio-src">
+                </audio>
+                <div id="song-controls">
+                    <button class="button-box-left" id="seek-rev">
+                        &larr;
+                    </button>
+                    <button class="button-box-right" id="seek-fwd">
+                        &rarr;
+                    </button>
+                    <button class="button-box text-center mx-auto" id="add-to-playlist-btn">
+                        <p>Add To Playlist</p>
+                    </button>
+
+                </div>
+            </section>
+            <!-- Playlist Section -->
+            <section id="playlist-section" class="col">
+                <div id="playlist-input" class="mt-4">
+                    <input type="text" id="playlist-name-input" placeholder="Playlist Name" name="playlist-name">
+                    <button class="btn btn-outline-success" id="create-playlist-btn">Create Playlist</button>
+                </div>
+                <div id="current-playlist">
+                    <h3 class="text-start playlist-heading">Current Playlist</h3>
+                    <!-- Current Playlist contents -->
+                    <div id="current-playlist-content">
+                        <p>No Playlist Selected</p>
+                    </div>
+                </div>
+                <div class="all-playlist">
+                    <h3 class="text-start playlist-heading">
+                        All Playlist
+                    </h3>
+                    <div id="playlist-div" class="position-relative d-block">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

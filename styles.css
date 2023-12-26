@@ -1,0 +1,172 @@
+
+
+/*
+    colors
+
+    --dark-theme: #464655;
+    --dark-theme-lighter-shade: #94958B;
+    --light-theme: #B6F9C9;
+    --ligt-theme-darker-shade: #11D047;
+    --button-box-light:#4b7f52;
+    dak-img-background:#20201D;
+
+*/
+
+
+
+/* Dark Theme */
+.dark-color{
+    background-color: #464655;
+}
+
+/* Slider Button */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* All Songs Section */
+#all-songs-heading{
+    margin: 2rem 0.25rem;
+}
+#all-songs {
+    border-radius: 3%;
+    margin: 2rem 1rem;
+    background-color: #B6F9C9 /* Light-theme*/;
+}
+    /* filter Section */
+#filter-selector{
+    margin: 2rem 1rem;
+    
+}
+#filter-selector-dropdown{
+    background-color: #064B1A;
+}
+    /* Song */
+.song{
+    border: none;
+    margin: 3% auto;
+    color: white;
+    display: block;
+    overflow: hidden;
+    border-radius:3%;
+    justify-content: space-around !important;
+    background-color: #11D047 /*var(--ligt-theme-darker-shade)*/;
+    padding: 0.5rem 1rem;
+    width: 55%;
+}
+.song:hover{
+    transition: 0.5s;
+    background-color:  #B6F9C9 /* Light-theme*/;
+}
+
+/* Song-play-section */
+#song-play-section{
+    border-radius: 3%;
+    margin: 2rem 1rem;
+    background-color:  #B6F9C9 /* Light-theme*/;
+}
+#song-play-img-div{
+    border-radius: 3%;
+    margin: 2rem 1rem 1rem 1rem;
+    background-color: #11D047 /*var(--ligt-theme-darker-shade)*/;
+}
+#song-play-img{
+    margin: 2rem;
+}
+.button-box-left{
+    display: inline-block;
+    margin: 0.3rem 0.1rem 1rem 3rem;;
+    background-color: #4b7f52/*button-box-light*/;
+    height: 40px;
+    width: 60px;
+}
+.button-box-right{
+    display: inline-block;
+    margin: 0.3rem 3rem 1rem 0.1rem;;
+    background-color: #4b7f52/*button-box-light*/;
+    height: 40px;
+    width: 60px;
+}
+.button-box{
+    font-size: smaller;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #4b7f52/*button-box-light*/;
+    height: 50px;
+    width: 70px;
+}
+    /* Artist Name */
+#artist-name{
+    padding: 0 0 1rem 0;
+}
+/* Playlist Section */
+#playlist-section{
+    margin: 2rem 1rem;
+    background-color:  #B6F9C9 /* Light-theme*/;
+    border-radius: 3%;
+}
+/* Current Playlist heading */
+.playlist-heading{
+    margin: 2rem 1rem;
+}
